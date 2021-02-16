@@ -9,6 +9,9 @@ public class Main {
         String inString = scan.nextLine();
         System.out.println("Enter Number of World: ");
         int numberWorld = scan.nextInt();
+        getFirstCharacterOfWord(inString,numberWorld);
+    }
+    public static void getFirstCharacterOfWord(String inString,int numberWorld){
         int idxCurWorld = 0;
         int idxNextWorld = 0;
         int curNumbWorld = 0;
