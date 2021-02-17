@@ -10,6 +10,9 @@ public class Main {
         System.out.println("BinaryNumber: " + convertDecimalToBinary(number));
     }
     public static String convertDecimalToBinary (int number){
+        if(number < 0) {
+            return "Incorrect Number";
+        }
         int curBit;
         String outString="";
         while(number != 0) {
