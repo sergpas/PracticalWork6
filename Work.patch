@@ -1,0 +1,17 @@
+Index: src/com/alfa/work64/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/com/alfa/work64/Main.java	(revision 7c3f8437bc054f3dd7d84e309fd59e291dfa662c)
++++ src/com/alfa/work64/Main.java	(date 1613579996083)
+@@ -10,6 +10,9 @@
+         System.out.println("BinaryNumber: " + convertDecimalToBinary(number));
+     }
+     public static String convertDecimalToBinary (int number){
++        if(number < 0) {
++            return "Incorrect Number";
++        }
+         int curBit;
+         String outString="";
+         while(number != 0) {
