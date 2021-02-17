@@ -9,16 +9,16 @@ public class Main {
             System.out.println("Incorrect parameter:" + height);
             return;
         }
-        int curHeight = 0;
-        while (++curHeight <= height) {
+        int curRow = 0;
+        while (++curRow <= height) {
             int curNumber = 0;
-            String outString = "";
-            String reverseString = "";
-            while (++curNumber < curHeight) {
-                outString = outString + curNumber;
-                reverseString = curNumber + reverseString;
+            String leftString = "";
+            String rightString = "";
+            while (++curNumber < curRow) {
+                leftString = leftString + curNumber;
+                rightString = curNumber + rightString;
             }
-            System.out.print(" ".repeat(height - curHeight + 1) + outString + curNumber + reverseString + "\n");
+            System.out.print(" ".repeat(height - curRow + 1) + leftString + curNumber + rightString + "\n");
         }
     }
 }
