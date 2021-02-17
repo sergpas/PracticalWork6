@@ -12,8 +12,8 @@ public class Main {
     public static String convertDecimalToBinary (int number){
         int curBit;
         String outString="";
-        while(number !=0 ) {
-            curBit = number%2;
+        while(number != 0) {
+            curBit = number % 2;
             outString = curBit + outString;
             number = number / 2;
         }
