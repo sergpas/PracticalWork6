@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         printPyramid(9);
     }
+
     public static void printPyramid (int height){
         int curHeight = 0;
         int maxHeight = height;
