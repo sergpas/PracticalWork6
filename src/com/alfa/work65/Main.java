@@ -19,9 +19,8 @@ public class Main {
             System.out.print(" ".repeat(height - curHeight + 1));
             while (++curNumber < curHeight) {
                 outString = outString + curNumber;
-                if (curNumber < curHeight - 1) {    //Не повторяем максимальную цифру в строке справа
-                    reverseString = curNumber + reverseString;
-                }
+                if (curNumber >= curHeight - 1) break; //Не повторяем максимальную цифру в строке справа
+                reverseString = curNumber + reverseString;
             }
             System.out.print(outString + reverseString + "\n");
         }
