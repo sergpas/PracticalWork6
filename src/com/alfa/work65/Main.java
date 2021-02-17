@@ -2,7 +2,7 @@ package com.alfa.work65;
 
 public class Main {
     public static void main(String[] args) {
-        printPyramid(5);
+        printPyramid(9);
     }
 
     public static void printPyramid(int height) {
@@ -11,13 +11,12 @@ public class Main {
             return;
         }
         int curHeight = 0;
-        int maxHeight = height;
         while (++curHeight <= height + 1) {
             int curNumber = 0;
             curNumber = 0;
             String outString = "";
             String reverseString = "";
-            System.out.print(" ".repeat(maxHeight));
+            System.out.print(" ".repeat(height - curHeight + 1));
             while (++curNumber < curHeight) {
                 outString = outString + curNumber;
                 if (curNumber < curHeight - 1) {
@@ -26,7 +25,6 @@ public class Main {
             }
             System.out.print(outString + reverseString);
             System.out.println();
-            maxHeight--;
         }
     }
 }
