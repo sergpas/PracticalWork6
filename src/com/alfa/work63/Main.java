@@ -9,7 +9,10 @@ public class Main {
         String inString = scan.nextLine();
         System.out.println("Enter Number of World: ");
         int numberWorld = scan.nextInt();
-        System.out.println("First Symbol: "+getFirstCharacterOfWord(inString,numberWorld));
+        char chr = getFirstCharacterOfWord(inString,numberWorld);
+        if (chr != ' ') {
+            System.out.println("First Symbol: "+chr);
+        }
     }
     public static char getFirstCharacterOfWord(String inString,int numberWorld){
         int idxCurWorld = 0;
