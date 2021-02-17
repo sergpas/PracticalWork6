@@ -14,12 +14,14 @@ public class Main {
             return "Incorrect Number";
         }
         int curBit;
-        String outString = "0";
+        String outString = "";
         while(number != 0) {
             curBit = number % 2;
             outString = curBit + outString;
             number = number / 2;
         }
+        int countZerro = 32 - outString.length();
+        outString = "0".repeat(countZerro) + outString;
         return outString;
     }
 }
