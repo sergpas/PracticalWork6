@@ -8,9 +8,9 @@ public class Main {
         String inString = scan.nextLine();
         System.out.println("Enter Number of World: ");
         int numberWorld = scan.nextInt();
-        char chr = getFirstCharacterOfWord(inString,numberWorld);
-        if (chr != ' ') {
-            System.out.println("First Symbol: "+chr);
+        char retChar = getFirstCharacterOfWord(inString,numberWorld);
+        if (retChar != ' ') {
+            System.out.println("First Symbol: "+retChar);
         }else{
             System.out.println("Incorrect Number of World: "+numberWorld);
         }
