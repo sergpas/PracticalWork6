@@ -14,12 +14,10 @@ public class Main {
         int maxHeight = height;
         while (++curHeight <= height + 1) {
             int curNumber = 0;
-            while (++curNumber <= maxHeight) {      //Рисуем отступы в начале каждой строки
-                System.out.print(' ');
-            }
             curNumber = 0;
             String outString = "";
             String reverseString = "";
+            System.out.print(" ".repeat(maxHeight));
             while (++curNumber < curHeight) {
                 outString = outString + curNumber;
                 if (curNumber < curHeight - 1) {
