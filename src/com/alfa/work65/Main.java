@@ -17,11 +17,12 @@ public class Main {
             String outString = "";
             String reverseString = "";
             System.out.print(" ".repeat(height - curHeight + 1));
-            while (++curNumber < curHeight - 1) {
+            while (++curNumber < curHeight) {
                 outString = outString + curNumber;
+                if (curNumber >= curHeight - 1) break; //Не повторяем максимальную цифру в строке справа
                 reverseString = curNumber + reverseString;
             }
-            System.out.print(outString + curNumber + reverseString + "\n");
+            System.out.print(outString + reverseString + "\n");
         }
     }
 }
