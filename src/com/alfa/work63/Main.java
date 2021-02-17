@@ -18,7 +18,7 @@ public class Main {
         int idxCurWorld = 0;
         int idxNextWorld = 0;
         int curNumbWorld = 0;
-        while ((idxNextWorld=inString.indexOf(' ',idxCurWorld))>0){
+        while ((idxNextWorld=inString.indexOf(' ',idxCurWorld)) > 0){
             if(++curNumbWorld == numberWorld) {
                 System.out.println("First Symbol: "+inString.substring(idxCurWorld,idxNextWorld).charAt(0));
                 return ' ';
