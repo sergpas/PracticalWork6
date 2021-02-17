@@ -23,8 +23,7 @@ public class Main {
                     reverseString = curNumber + reverseString;
                 }
             }
-            System.out.print(outString + reverseString);
-            System.out.println();
+            System.out.print(outString + reverseString + "\n");
         }
     }
 }
