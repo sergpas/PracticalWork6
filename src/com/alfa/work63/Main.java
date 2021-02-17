@@ -9,23 +9,24 @@ public class Main {
         String inString = scan.nextLine();
         System.out.println("Enter Number of World: ");
         int numberWorld = scan.nextInt();
-        getFirstCharacterOfWord(inString,numberWorld);
+        System.out.println("First Symbol: "+getFirstCharacterOfWord(inString,numberWorld));
     }
-    public static void getFirstCharacterOfWord(String inString,int numberWorld){
+    public static char getFirstCharacterOfWord(String inString,int numberWorld){
         int idxCurWorld = 0;
         int idxNextWorld = 0;
         int curNumbWorld = 0;
         while ((idxNextWorld=inString.indexOf(' ',idxCurWorld))>0){
             if(++curNumbWorld == numberWorld) {
                 System.out.println("First Symbol: "+inString.substring(idxCurWorld,idxNextWorld).charAt(0));
-                return;
+                return ' ';
             }
             idxCurWorld=idxNextWorld+1;
         }
         if(++curNumbWorld == numberWorld) {
-            System.out.println("First Symbol: "+inString.substring(idxCurWorld).charAt(0));
+            return inString.substring(idxCurWorld).charAt(0);
         }else{
             System.out.println("Incorrect Number of World: "+numberWorld);
         }
+        return ' ';
     }
 }
